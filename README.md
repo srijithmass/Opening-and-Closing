@@ -50,9 +50,9 @@ from matplotlib import pyplot as plt
 ```python
 text_image = np.zeros((100,250),dtype = 'uint8')
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
-cv2.putText(text_image,"Kaushika",(5,70),font,2,(255),2,cv2.LINE_AA) 
+cv2.putText(text_image,"SRIJITH R",(5,70),font,2,(255),2,cv2.LINE_AA) 
 plt.title("Original Image")
-plt.imshow(text_image,'Blues')
+plt.imshow(text_image,'binary')
 plt.axis('off')
 ```
 ### Create the structuring element
@@ -64,14 +64,14 @@ kernel2=cv2.getStructuringElement(cv2.MORPH_RECT,(5,5))
 ```python
 img_open=cv2.morphologyEx(text_image,cv2.MORPH_OPEN,kernel2)
 plt.title("Opened Image")
-plt.imshow(img_open,'Blues')
+plt.imshow(img_open,'binary')
 plt.axis('off')
 ```
 # Use Closing Operation
 ```python
 img_close=cv2.morphologyEx(text_image,cv2.MORPH_CLOSE,kernel1)
 plt.title("Closed Image")
-plt.imshow(img_close,'Blues')
+plt.imshow(img_close,'binary')
 plt.axis('off')
 ```
 
